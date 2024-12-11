@@ -4,18 +4,16 @@ import CanvasLoader from "../Loader";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
-const Computers = () => {
+const Computers = ({ isMobile }) => {
   // Load the GLTF model
   const computer = useGLTF("./desktop_pc/scene.gltf");
 
   return (
     <mesh>
       {/* Hemisphere light for ambient lighting */}
-      <hemisphereLight intensity={0.15} groundColor="black" />
-
+      <hemisphereLight intensity={2} groundColor="black" />
       {/* Point light for focused lighting */}
       <pointLight intensity={1} />
-
       {/* Spot light for directional shadow-casting */}
       <spotLight
         position={[-20, 50, 10]}
@@ -25,7 +23,6 @@ const Computers = () => {
         castShadow
         shadow-mapSize={1024}
       />
-
       {/* GLTF model */}
       <primitive
         object={computer.scene}
@@ -64,7 +61,7 @@ const ComputersCanvas = () => {
 
   return (
     <Canvas
-      frameLoop="demand"
+      frameloop="demand"
       shadows
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
@@ -87,4 +84,4 @@ const ComputersCanvas = () => {
   );
 };
 
-export default Computers;
+export default ComputersCanvas;

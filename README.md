@@ -11,6 +11,3 @@ Tech Div remaining
 
 files are in src/components.Tech.jsx
 and file in src/components./canvas/Ball.jsx
-
-FeedBacks remaining
-file in src/components/Feedbacks

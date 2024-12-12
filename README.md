@@ -8,5 +8,9 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 Tech Div remaining
+
 files are in src/components.Tech.jsx
 and file in src/components./canvas/Ball.jsx
+
+FeedBacks remaining
+file in src/components/Feedbacks
